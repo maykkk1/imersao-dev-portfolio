@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --primary-color: #7a04eb;
+  --secundary-color: #ffd300;
+  --effects-color: #ff124f;
+  --neutral-color: #c4ffff;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  height: max-content;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 400ms;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+header {
+  color: white;
+  position: relative;
+  width: 100%;
+  height: max-content;
+  background-color: white;
+  display: flex;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+  background-color: #ff124d67;
+}
+
+.bd-header-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  opacity: 0.5;
+}
+
+.header-content {
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.avatarWrapper {
+  width: 200px;
+  height: 200px;
+  min-width: 200px;
+  border-radius: 100px;
+  overflow: hidden;
+  border: 3px solid var(--primary-color);
+}
+.avatarWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.myInfo {
+  text-shadow: 1px 1px 3px black;
+  display: flex;
+  flex-direction: column;
+}
+
+.myInfo h2 {
+  font-size: 2rem;
+  color: var(--secundary-color);
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.myInfo p {
+  font-size: 1.5rem;
+}
+
+.myInfo p a {
+  color: var(--secundary-color);
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.myInfo ul {
+  margin-top: auto;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.myInfo ul a {
+  font-size: 3rem;
+  color: var(--secundary-color);
+  transition: 400ms;
+}
+
+.myInfo ul a:hover {
+  color: var(--effects-color);
+}
+
+.projects-container {
+  background-image: url("https://images.unsplash.com/photo-1563089145-599997674d42?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  width: 100%;
+  height: max-content;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.projects-section-title {
+  margin: 15px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: var(--secundary-color);
+  text-shadow: 2px 2px 5px var(--effects-color);
+}
+
+.project {
+  width: 330px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: max-content;
+  border-radius: 5px;
+  padding: 10px 0;
+  border: 3px solid var(--primary-color);
+  background-color: black;
+}
+
+.project h2 {
+  font-size: 1.3rem;
+  color: var(--effects-color);
+  text-transform: uppercase;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectImgWrapper {
+  width: 90%;
+  height: 200px;
+  border: 2px solid var(--effects-color);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.projectImgWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-top: 10px;
+  width: 90%;
+}
+
+.project ul li {
+  width: 90px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+
+  border-radius: 5px;
+}
+
+.project ul li:hover {
+  background-color: var(--effects-color);
+}
+
+.project ul li a {
+  text-decoration: none;
+  color: var(--secundary-color);
+  font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+  .header-content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    height: max-content;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .header-content {
+    padding: 15px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .myInfo ul {
+    justify-content: center;
+  }
+}
